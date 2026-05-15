@@ -60,10 +60,33 @@ export default function Home() {
             </div>
           </div>
 
-          <form
-            id="post-task"
-            className="bg-white text-black rounded-[2rem] p-8 shadow-[0_30px_80px_rgba(0,0,0,0.45)] space-y-4"
-          >
+          
+<form
+  id="post-task"
+  className="bg-white text-black rounded-[2rem] p-8 shadow-[0_30px_80px_rgba(0,0,0,0.45)]"
+  onSubmit={async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.currentTarget);
+
+    const data = {
+      name: formData.get("name"),
+      task: formData.get("task"),
+      location: formData.get("location"),
+      time: formData.get("time"),
+      contact: formData.get("contact"),
+      price: formData.get("price"),
+      payment: formData.get("payment"),
+    };
+
+    await fetch("https://script.google.com/macros/s/AKfycbxH-ZTy83lz5-d954qbjFACzfp965vmTOVUZYtbc6eKZUtoMOzHenk3L0T9ohmhOjju0w/exec", {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
+
+    alert("Task posted!");
+  }}
+>
             <div>
               <h2 className="text-4xl font-black">Post your task</h2>
               <p className="text-gray-500 mt-2">
