@@ -115,12 +115,12 @@ if (data.payment === "Cash App") {
 
 <input name="price" placeholder="Price" className="w-full p-4 rounded-xl bg-gray-100 outline-none focus:ring-2" />
 
-<select name="payment" className="...">
-<option disabled selected>Choose payment method</option>
-             <option>Cash App</option>
-<option>Zelle</option>
-<option>Venmo</option>
-<option>Apple Pay</option>
+<select name="payment" defaultValue="" className="...">
+<option value="" disabled>Choose payment method</option>
+<option value="Cash App">Cash App</option>
+<option value="Zelle">Zelle</option>
+<option value="Venmo">Venmo</option>
+<option value="Apple Pay">Apple Pay</option>
             </select>
 
             <div className="bg-gray-100 rounded-xl p-4 text-sm flex justify-between">
@@ -128,7 +128,7 @@ if (data.payment === "Cash App") {
               <strong>$3</strong>
             </div>
 
-            <button className="w-full bg-[#070A14] hover:bg-black transition text-white py-4 rounded-xl font-black">
+<button type="submit" className="w-full bg-[#070A14] hover:bg-black transition text-white py-4 rounded-xl">
               Continue to Post
             </button>
 
