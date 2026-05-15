@@ -85,6 +85,16 @@ export default function Home() {
     });
 
     alert("Task posted!");
+
+if (data.payment === "Cash App") {
+  window.location.href = "https://cash.app/$Trey1506";
+} else if (data.payment === "Venmo") {
+  window.location.href = "https://venmo.com/312-785-8076";
+} else if (data.payment === "Zelle") {
+  alert("Send Zelle payment to: 312-785-8076 or trexrussell50@gmail.com");
+} else if (data.payment === "Apple Pay") {
+  alert("Send Apple Pay to: 312-785-8076");
+}
   }}
 >
             <div>
@@ -93,20 +103,24 @@ export default function Home() {
                 Tell students what you need done.
               </p>
             </div>
+<input name="name" placeholder="Name" className="w-full p-4 rounded-xl bg-gray-100 outline-none focus:ring-2" />
 
-            <input className="w-full p-4 rounded-xl bg-gray-100 outline-none focus:ring-2 focus:ring-red-500" placeholder="Your name" />
-            <input className="w-full p-4 rounded-xl bg-gray-100 outline-none focus:ring-2 focus:ring-red-500" placeholder="What do you need done?" />
-            <input className="w-full p-4 rounded-xl bg-gray-100 outline-none focus:ring-2 focus:ring-red-500" placeholder="Location on or near campus" />
-            <input className="w-full p-4 rounded-xl bg-gray-100 outline-none focus:ring-2 focus:ring-red-500" placeholder="When do you need it?" />
-            <input className="w-full p-4 rounded-xl bg-gray-100 outline-none focus:ring-2 focus:ring-red-500" placeholder="Contact info" />
-            <input className="w-full p-4 rounded-xl bg-gray-100 outline-none focus:ring-2 focus:ring-red-500" placeholder="Worker pay amount ($)" />
+<input name="email" placeholder="Email" className="w-full p-4 rounded-xl bg-gray-100 outline-none focus:ring-2" />
 
-            <select className="w-full p-4 rounded-xl bg-gray-100 outline-none focus:ring-2 focus:ring-red-500">
-              <option>Payment method</option>
-              <option>Venmo</option>
-              <option>Cash</option>
-              <option>CashApp</option>
-              <option>Other</option>
+<input name="phone" placeholder="Phone" className="w-full p-4 rounded-xl bg-gray-100 outline-none focus:ring-2" />
+
+<input name="task" placeholder="Task" className="w-full p-4 rounded-xl bg-gray-100 outline-none focus:ring-2" />
+
+<input name="description" placeholder="Description" className="w-full p-4 rounded-xl bg-gray-100 outline-none focus:ring-2" />
+
+<input name="price" placeholder="Price" className="w-full p-4 rounded-xl bg-gray-100 outline-none focus:ring-2" />
+
+<select name="payment" className="...">
+<option disabled selected>Choose payment method</option>
+             <option>Cash App</option>
+<option>Zelle</option>
+<option>Venmo</option>
+<option>Apple Pay</option>
             </select>
 
             <div className="bg-gray-100 rounded-xl p-4 text-sm flex justify-between">
