@@ -18,6 +18,12 @@ export default function HowItWorks() {
 
       </div>
 
+<a
+  href="/#post-task"
+  className="mt-10 bg-red-500 hover:bg-red-600 px-8 py-4 rounded-xl font-bold"
+>
+  Post a Task
+</a>
     </main>
   );
 }
