@@ -6,7 +6,10 @@ export default function HowItWorks() {
         How TaskU Works
       </h1>
 
-      <div className="space-y-6 text-lg text-gray-300 max-w-xl">
+<p className="text-gray-400 mb-8 text-lg">
+  Get help around campus in minutes.
+</p>
+<div className="bg-white/5 border border-white/10 rounded-2xl p-8 space-y-6 text-lg text-gray-300 max-w-xl">
 
         <p><strong>1.</strong> Post a task with details.</p>
         <p><strong>2.</strong> Pay the small posting fee.</p>
@@ -18,4 +21,7 @@ export default function HowItWorks() {
     </main>
   );
 }
+
+
+
 
