@@ -1,3 +1,5 @@
+
+"use client";
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#070A14] text-white">
@@ -66,19 +68,16 @@ export default function Home() {
   className="bg-white text-black rounded-[2rem] p-8 shadow-[0_30px_80px_rgba(0,0,0,0.45)]"
   onSubmit={async (e) => {
     e.preventDefault();
-
-    const formData = new FormData(e.currentTarget);
-
-    const data = {
-      name: formData.get("name"),
-      task: formData.get("task"),
-      location: formData.get("location"),
-      time: formData.get("time"),
-      contact: formData.get("contact"),
-      price: formData.get("price"),
-      payment: formData.get("payment"),
-    };
-
+const formData = new FormData(e.currentTarget);
+  const data = {
+  name: formData.get("name"),
+  email: formData.get("email"),
+  phone: formData.get("phone"),
+  task: formData.get("task"),
+  description: formData.get("description"),
+  price: formData.get("price"),
+  payment: formData.get("payment"),
+};
     await fetch("https://script.google.com/macros/s/AKfycbxH-ZTy83lz5-d954qbjFACzfp965vmTOVUZYtbc6eKZUtoMOzHenk3L0T9ohmhOjju0w/exec", {
       method: "POST",
       body: JSON.stringify(data),
